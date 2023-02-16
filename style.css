@@ -1,0 +1,75 @@
+/* Set the background color for the entire page */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Set the styles for the heading at the top of the page */
+  h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: #1f618d;
+  }
+  
+  /* Set the styles for the subheading */
+  h2 {
+    color: #2c3e50;
+  }
+  
+  /* Set the styles for the links */
+  a {
+    color: #2980b9;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #1f618d;
+  }
+  
+  /* Set the styles for the project list */
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin: 10px 0;
+  }
+  
+  /* Set the styles for the image thumbnails */
+  .thumbnail {
+    height: 200px;
+    width: 200px;
+    border: 1px solid #ccc;
+    margin-right: 20px;
+  }
+  
+  .thumbnail img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  /* Set the styles for the project descriptions */
+  .description {
+    margin: 20px 0;
+  }
+  
+  /* Set the styles for the social media links */
+  .social {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social a {
+    margin: 0 10px;
+    font-size: 30px;
+    color: #2980b9;
+  }
+  
+  .social a:hover {
+    color: #1f618d;
+  }
+  

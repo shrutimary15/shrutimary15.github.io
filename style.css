@@ -1,75 +1,142 @@
-/* Set the background color for the entire page */
-body {
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
+/* Normalize CSS */
+* {
+    box-sizing: border-box;
   }
   
-  /* Set the styles for the heading at the top of the page */
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  
   h1 {
-    text-align: center;
-    margin-top: 30px;
-    color: #1f618d;
+    font-size: 3rem;
+    letter-spacing: -0.05em;
   }
   
-  /* Set the styles for the subheading */
   h2 {
-    color: #2c3e50;
+    font-size: 2.5rem;
+    letter-spacing: -0.05em;
   }
   
-  /* Set the styles for the links */
-  a {
-    color: #2980b9;
+  h3 {
+    font-size: 2rem;
+    letter-spacing: -0.025em;
+  }
+  
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Colors */
+  :root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+  }
+  
+  /* Layout */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  nav {
+    display: flex;
+  }
+  
+  nav a {
     text-decoration: none;
+    color: var(--dark-color);
+    margin-right: 1rem;
   }
   
-  a:hover {
-    color: #1f618d;
+  nav a:hover {
+    color: var(--primary-color);
   }
   
-  /* Set the styles for the project list */
+  section {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--light-color);
+    padding-bottom: 2rem;
+  }
+  
+  section:last-of-type {
+    border-bottom: none;
+  }
+  
   ul {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
   }
   
   li {
-    margin: 10px 0;
+    margin-bottom: 1rem;
   }
   
-  /* Set the styles for the image thumbnails */
-  .thumbnail {
-    height: 200px;
-    width: 200px;
-    border: 1px solid #ccc;
-    margin-right: 20px;
+  footer {
+    text-align: center;
+    border-top: 1px solid var(--secondary-color);
+    padding-top: 1rem;
+    margin-top: 2rem;
   }
   
-  .thumbnail img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  /* Buttons */
+  .button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 0.25rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
   }
   
-  /* Set the styles for the project descriptions */
-  .description {
-    margin: 20px 0;
+  .button:hover {
+    background-color: var(--primary-color);
+    color: var(--light-color);
   }
   
-  /* Set the styles for the social media links */
-  .social {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-  }
+  /* Responsive Design */
+  @media (max-width: 767px) {
+    header {
+      flex-direction: column;
+    }
   
-  .social a {
-    margin: 0 10px;
-    font-size: 30px;
-    color: #2980b9;
-  }
+    header h1 {
+      margin-bottom: 1rem;
+    }
   
-  .social a:hover {
-    color: #1f618d;
+    nav {
+      margin-top: 1rem;
+    }
   }
   

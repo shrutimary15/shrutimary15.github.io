@@ -8,6 +8,14 @@
     --text-black-700:#504e70;
 }
 
+body.dark{
+    --bgblack-900: #151515;
+    --bg-black-100: #222222;
+    --bg-black-50: #393939;
+    --text-black-900: #edcecec7;
+    --text-black-700: #bbb5b5;
+}
+
 body{
     margin:0;
     padding: 0;
@@ -634,7 +642,7 @@ h3.my-profession{
 .service .service-item .service-item-inner h4{
     font-size: 24px;
     margin-bottom: 15px;
-    color: var (var(--text-black-900));
+    color: var(--text-black-900);
     font-weight: 700;
     text-transform: capitalize;
 }
@@ -660,40 +668,57 @@ h3.my-profession{
 
 
  /*Portfolio*/
-.portfolio .container{
+.portfolio .container {
     padding-bottom: 40px;
+    color: red;
 }
 
- .portfolio .portfolio-heading{
+.portfolio .portfolio-heading {
     flex: 0 0 100%;
     max-width: 100%;
-    margin-bottom: 40px;
- }
+    margin-bottom: 10px;
+}
 
- .portfolio .portfolio-heading h2{
+.portfolio .portfolio-heading h2 {
     color: var(--text-black-900);
     font-weight: 800;
-    font-family: 'Poppins';
- }
+}
 
- .portfolio .portfolio-item{
+.portfolio .portfolio-item {
     flex: 0 0 50%;
     max-width: 50%;
     margin-bottom: 30px;
- }
+    color: green;
+}
 
- .portfolio .portfolio-item-inner{
-    border:6px solid var(--bg-black-100);
+.portfolio .portfolio-item-inner {
+    border: 6px solid var(--bg-black-100);
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
- }
+    color: white;
+}
 
- .portfolio .portfolio-item-inner .portfolio-img img{
+.portfolio .portfolio-item-inner .portfolio-img img {
     width: 100%;
     display: block;
- }
+}
 
+.portfolio .portfolio-item-inner .portfolio-details h3{
+    color: var(--skin-color);
+    font-weight: 700;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.portfolio .portfolio-item-inner .portfolio-details p {
+    font-weight: 500;
+    font-size:18px ;
+    color: var(--text-black-700);
+    text-align: justify;
+    padding: 10px;
+}
+ 
  /*Contact*/
 
  .contact-title{
@@ -775,7 +800,7 @@ h3.my-profession{
     box-shadow: 0 0 20px rgba(48,46,77,0.15);
 }
 
-.contact .contact-form .form-item .textarea{
+.contact .contact-form .form-item .textarea.form-control{
     height: 140px;
 } 
 
@@ -837,17 +862,30 @@ h3.my-profession{
     .contact .contact-info-item,
     .portfolio .portfolio-item,
     .service .service-item{
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex:0 0 100%;
+        max-width: 100%;
     }
     
+    .home{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .home .home-info{
         flex: 0 0 100%;
         max-width: 100%;
+        order:2;
     }
 
     .home .home-img{
-        display: none;
+        flex:0 0 100%;
+        max-width: 100%;
+        order: 1;
+    }
+
+    .home .home-img::after,.home-img::before{
+            display: none;
     }
 }
 
@@ -864,4 +902,32 @@ h3.my-profession{
         flex: 0 0 100%;
         max-width: 100%;
     }
+}
+
+
+
+/*Thanks HTML*/
+.thanks-main-content{
+    background: var(--bgblack-900);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid var(--skin-color);
+}
+
+.thanks-main-content .thanks-container{
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.thanks-main-content .thanks-container h1{
+    font-weight: 900;
+    font-size: 80px;
+}
+.thanks-main-content .thanks-container p {
+    font-weight: 500;
+    font-size: 20px;
 }
